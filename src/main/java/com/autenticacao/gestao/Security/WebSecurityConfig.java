@@ -102,7 +102,7 @@ public class WebSecurityConfig {
          * aqui vou informar quais rotas não precisa de autenticação
          */
       
-        .authorizeRequests().antMatchers("/api/usuario/**").permitAll()
+        .authorizeRequests().antMatchers("/api/usuario").permitAll()
         .antMatchers("/api/test/**").permitAll()
         .anyRequest().authenticated();
     
