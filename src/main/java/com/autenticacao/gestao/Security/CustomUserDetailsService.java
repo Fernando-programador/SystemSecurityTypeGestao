@@ -28,12 +28,12 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Transactional
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        Usuario usuario = getUser(() -> usuarioService.obterPorEmail(email));
-        return usuario;
-    //    Usuario usuario = usuarioRepository.findByEmail(email)
-      //  		.orElseThrow(() -> new UsernameNotFoundException("User Not Found with email: " + email));
+       // Usuario usuario = getUser(() -> usuarioService.obterPorEmail(email));
+      // return usuario;
+       Usuario usuario = usuarioRepository.findByEmail(email)
+        		.orElseThrow(() -> new UsernameNotFoundException("User Not Found with email: " + email));
 
-    //return UsuarioImpl.build(usuario);
+    return UsuarioImpl.build(usuario);
     }
 
     public UserDetails obterPorId(Long id) {

@@ -16,7 +16,9 @@ import org.springframework.stereotype.Service;
 import com.autenticacao.gestao.Model.Usuario;
 import com.autenticacao.gestao.Repository.UsuarioRepository;
 import com.autenticacao.gestao.Security.JWTService;
-import com.autenticacao.gestao.View.Model.usuario.LoginResponse;
+import com.autenticacao.gestao.View.LoginResponse;
+
+
 
 @Service
 public class UsuarioService {
@@ -65,7 +67,8 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
-    public LoginResponse logar(String email, String senha) {
+    
+    public com.autenticacao.gestao.View.LoginResponse logar(String email, String senha) {
 
         // essa parte faz authetenticação do login caso não consiga vai estourar uma
         // exceção

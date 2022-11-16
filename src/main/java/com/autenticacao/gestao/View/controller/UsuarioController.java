@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.View.Controller;
+package com.autenticacao.gestao.View.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.autenticacao.gestao.Model.Usuario;
 import com.autenticacao.gestao.Service.UsuarioService;
-import com.autenticacao.gestao.View.Model.usuario.LoginRequest;
-import com.autenticacao.gestao.View.Model.usuario.LoginResponse;
+
 
 @CrossOrigin("*")
 @RestController
@@ -35,13 +34,13 @@ public class UsuarioController {
 
     }
 
-    @PostMapping
+    @PostMapping("/adicionar")
     public Usuario adicionar(Usuario usuario) {
         return usuarioService.adicionar(usuario);
     }
 
     @PostMapping("/login")
-    public LoginResponse login(LoginRequest request) {
+    public com.autenticacao.gestao.View.LoginResponse login(com.autenticacao.gestao.View.LoginRequest request) {
         return usuarioService.logar(request.getEmail(), request.getSenha());
     }
 

@@ -1,7 +1,6 @@
-package com.autenticacao.gestao.View.Model.usuario;
+package com.autenticacao.gestao.View;
 
 public class LoginRequest {
-
 
     private String email;
     private String senha;
@@ -18,7 +17,4 @@ public class LoginRequest {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-
-    
 }
