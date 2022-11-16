@@ -34,7 +34,7 @@ public class UsuarioController {
 
     }
 
-    @PostMapping("/adicionar")
+    @PostMapping
     public Usuario adicionar(Usuario usuario) {
         return usuarioService.adicionar(usuario);
     }

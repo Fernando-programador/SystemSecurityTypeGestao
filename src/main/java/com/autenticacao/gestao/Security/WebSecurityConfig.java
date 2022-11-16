@@ -102,7 +102,7 @@ public class WebSecurityConfig {
          * aqui vou informar quais rotas não precisa de autenticação
          */
       
-        .authorizeRequests().antMatchers("/api/auth/**").permitAll()
+        .authorizeRequests().antMatchers("/api/usuario/**").permitAll()
         .antMatchers("/api/test/**").permitAll()
         .anyRequest().authenticated();
     
@@ -113,7 +113,7 @@ public class WebSecurityConfig {
      * aqui eu informo que antes de qualquer requisição http,
      *  o sistema vai usar os meus filtros pre definidos
      */
-    http.addFilterBefore(authenticationJwtTokenFilter(), 
+ http.addFilterBefore(authenticationJwtTokenFilter(), 
     		UsernamePasswordAuthenticationFilter.class);
     
     return http.build();

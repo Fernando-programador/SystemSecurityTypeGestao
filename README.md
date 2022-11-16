@@ -22,4 +22,7 @@ o que ela faz?
  
  a proxima a ser criar é a classe JwtAuthenticayionFilter
  essa classe é a primiera a ser requisitada pelo sistema
+ é atrves dela se vamos saber se o usuario tem ou nao autorização para ter acesso
+ 
+ 
 
