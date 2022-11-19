@@ -21,7 +21,11 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Component
 public class JWTService  implements Serializable{
     
-    //chave secreta para codificar  e decodificar o token
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//chave secreta para codificar  e decodificar o token
     private static final String ChavePrivadaJWT = "secretKey";
 
     /**
