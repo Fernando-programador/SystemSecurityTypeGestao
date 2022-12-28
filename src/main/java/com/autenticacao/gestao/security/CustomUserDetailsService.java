@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.Security;
+package com.autenticacao.gestao.security;
 
 import java.util.Optional;
 import java.util.function.Supplier;
@@ -12,9 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import org.springframework.stereotype.Service;
 
-import com.autenticacao.gestao.Model.Usuario;
-import com.autenticacao.gestao.Repository.UsuarioRepository;
-import com.autenticacao.gestao.Service.UsuarioService;
+import com.autenticacao.gestao.model.Usuario;
+import com.autenticacao.gestao.repository.UsuarioRepository;
+import com.autenticacao.gestao.service.UsuarioService;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

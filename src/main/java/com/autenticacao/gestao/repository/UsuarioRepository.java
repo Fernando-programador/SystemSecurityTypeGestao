@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.Repository;
+package com.autenticacao.gestao.repository;
 
 import java.util.Optional;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
-import com.autenticacao.gestao.Model.Usuario;
+import com.autenticacao.gestao.model.Usuario;
 
 
 @Repository

@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.Security;
+package com.autenticacao.gestao.security;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -9,7 +9,7 @@ import java.util.Optional;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import com.autenticacao.gestao.Model.Usuario;
+import com.autenticacao.gestao.model.Usuario;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

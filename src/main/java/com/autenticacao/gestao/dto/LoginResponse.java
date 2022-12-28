@@ -1,6 +1,6 @@
-package com.autenticacao.gestao.View;
+package com.autenticacao.gestao.dto;
 
-import com.autenticacao.gestao.Model.Usuario;
+import com.autenticacao.gestao.model.Usuario;
 
 public class LoginResponse {
     private String token;

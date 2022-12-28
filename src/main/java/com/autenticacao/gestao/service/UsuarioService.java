@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.Service;
+package com.autenticacao.gestao.service;
 
 import java.util.Collections;
 import java.util.InputMismatchException;
@@ -13,10 +13,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.autenticacao.gestao.Model.Usuario;
-import com.autenticacao.gestao.Repository.UsuarioRepository;
-import com.autenticacao.gestao.Security.JWTService;
-import com.autenticacao.gestao.View.LoginResponse;
+import com.autenticacao.gestao.dto.LoginResponse;
+import com.autenticacao.gestao.model.Usuario;
+import com.autenticacao.gestao.repository.UsuarioRepository;
+import com.autenticacao.gestao.security.JWTService;
 
 
 
@@ -68,7 +68,7 @@ public class UsuarioService {
     }
 
     
-    public com.autenticacao.gestao.View.LoginResponse logar(String email, String senha) {
+    public LoginResponse logar(String email, String senha) {
 
         // essa parte faz authetenticação do login caso não consiga vai estourar uma
         // exceção

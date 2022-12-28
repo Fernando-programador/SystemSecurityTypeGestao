@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.Security;
+package com.autenticacao.gestao.security;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Configuration
 @EnableGlobalMethodSecurity(
@@ -24,6 +25,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
     //jsr250Enabled = true,
     prePostEnabled = true
 )
+
 public class WebSecurityConfig {
     //@Autowired
     //UserDetailsServiceImpl userDetailsService;
@@ -32,7 +34,7 @@ public class WebSecurityConfig {
 	private CustomUserDetailsService customUserDetailsService;
 	
    
-	private JWTAuthenticationFilter jwtAuthenticationFilter;
+	//private JWTAuthenticationFilter jwtAuthenticationFilter;
 
 
 
@@ -88,7 +90,7 @@ public class WebSecurityConfig {
 //    http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 //  }
   
- 
+  
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 	  
 	  //parte padrão do método
@@ -102,11 +104,14 @@ public class WebSecurityConfig {
          * aqui vou informar quais rotas não precisa de autenticação
          */
       
-        .authorizeRequests().antMatchers("/api/usuario").permitAll()
+        .authorizeRequests()
+        .antMatchers("/api/**").permitAll()
+        .antMatchers("/api/login/**").permitAll()
+        .antMatchers("/api/usuario/**").permitAll()
         .antMatchers("/api/test/**").permitAll()
         .anyRequest().authenticated();
     
-  //  http.authenticationProvider(authenticationProvider());
+    http.authenticationProvider(authenticationProvider());
 
 
     /*
@@ -120,6 +125,7 @@ public class WebSecurityConfig {
   }
 
   }
+  
     /*
      * Metodo que devolve a estamcia do objeto que sabe devolver o o nosso padrão de
      * codificação

@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.Security;
+package com.autenticacao.gestao.security;
 
 import java.io.IOException;
 import java.util.Collections;

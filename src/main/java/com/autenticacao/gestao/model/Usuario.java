@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.Model;
+package com.autenticacao.gestao.model;
 
 import java.util.Collection;
 

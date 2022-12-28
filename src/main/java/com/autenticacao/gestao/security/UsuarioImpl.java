@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.Security;
+package com.autenticacao.gestao.security;
 
 import java.util.Collection;
 
@@ -7,7 +7,7 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.autenticacao.gestao.Model.Usuario;
+import com.autenticacao.gestao.model.Usuario;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -15,7 +15,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class UsuarioImpl implements UserDetails {
 
 
-    private Long id;
+ 
+	private static final long serialVersionUID = 1L;
+
+	private Long id;
 
     private String nome;
 

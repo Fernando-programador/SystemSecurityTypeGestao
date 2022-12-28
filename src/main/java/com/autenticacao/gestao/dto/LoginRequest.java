@@ -1,4 +1,4 @@
-package com.autenticacao.gestao.View;
+package com.autenticacao.gestao.dto;
 
 public class LoginRequest {
 
